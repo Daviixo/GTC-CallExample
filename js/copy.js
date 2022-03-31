@@ -1,12 +1,14 @@
 function copyText() {
     var aName = document.getElementById("agentsName").value;
+    var callsDate = document.getElementById("dateTime").value;
 
     //Now, let's get the current date
 
     var today = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});
     
     document.getElementById("temp").value =
-        "---Agents name---\n" + aName + " | " + today;
+        "---Agents name---\n" + aName + " | " + today + 
+        "\n\nDate/Time: " + callsDate;
 
     var copyText = document.getElementById("temp");
 
