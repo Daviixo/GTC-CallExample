@@ -5,10 +5,14 @@ function copyText() {
     //Now, let's get the current date
 
     var today = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"});
-    
+
+    var newTimeDate = callsDate.split("T");
+
+    console.log(newTimeDate);
+
     document.getElementById("temp").value =
         "---Agents name---\n" + aName + " | " + today + 
-        "\n\nDate/Time: " + callsDate;
+        "\n\nDate/Time: " + newTimeDate[0] + " // Time: " + newTimeDate[1];
 
     var copyText = document.getElementById("temp");
 
